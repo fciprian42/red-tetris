@@ -3,7 +3,7 @@ import {
   GraphQLNonNull as NonNull,
   GraphQLObjectType as ObjectType,
   GraphQLString as String
-} from 'graphql';
+} from 'graphql'
 
 export const Users = new ObjectType({
   name: 'users',
@@ -11,6 +11,6 @@ export const Users = new ObjectType({
     id_user: { type: new NonNull(Int) },
     username: { type: new NonNull(String) },
     password: { type: new NonNull(String) }
-    //created_at: { type: new NonNull(Date) }
+    // created_at: { type: new NonNull(Date) }
   })
-});
+})

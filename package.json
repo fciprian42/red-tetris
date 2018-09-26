@@ -2,8 +2,9 @@
   "name": "red-tetris",
   "version": "1.0.0",
   "description": "red tetris, 42 project school",
-  "main": "server.js",
+  "main": "start.js",
   "scripts": {
+    "start": "nodemon --exec",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -12,13 +13,21 @@
   "author": "fciprian42",
   "license": "ISC",
   "devDependencies": {
+    "babel-plugin-transform-runtime": "6.23.0",
+    "babel-preset-env": "1.7.0",
+    "babel-register": "6.26.0",
+    "eslint": "5.6.0",
+    "eslint-config-standard": "12.0.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-node": "7.0.1",
+    "eslint-plugin-promise": "4.0.1",
+    "eslint-plugin-standard": "4.0.0",
     "express": "^4.16.3",
     "express-graphql": "^0.6.12",
     "graphql": "^14.0.2",
     "pg": "^7.4.3"
   },
   "dependencies": {
-    "bookshelf": "^0.13.3",
     "knex": "^0.15.2"
   }
 }

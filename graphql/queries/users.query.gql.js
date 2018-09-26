@@ -1,17 +1,14 @@
-import {
-  GraphQLInt as Int,
-  GraphQLNonNull as NonNull,
-  GraphQLObjectType as ObjectType,
-  GraphQLString as String
-} from 'graphql';
+import { Users } from '../types/users.type.gql'
 
-import { Users} from "../types/users.type.gql";
+import knex from '../knex'
 
 export const getUsers = {
   type: Users,
-  description: "Return all users",
-  args: {},
-  resolve: (value) => {
-
+  description: 'Return all users',
+  resolve: async () => {
+    const users = await knex.select('*').from('users').then(res => {
+      if (res) { return res[0] }
+    })
+    return users
   }
-};
+}

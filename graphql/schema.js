@@ -1,9 +1,9 @@
 import {
   GraphQLSchema as Schema,
   GraphQLObjectType as ObjectType
-} from 'graphql';
+} from 'graphql'
 
-import { getUsers } from "./queries/users.query.gql";
+import { getUsers } from './queries/users.query.gql'
 
 const graphqlSchema = new Schema({
   query: new ObjectType({
@@ -12,6 +12,6 @@ const graphqlSchema = new Schema({
       getUsers
     }
   })
-});
+})
 
-export default graphqlSchema;
+export default graphqlSchema
